@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+body, h1, h2, h3, h4{
+    margin:0;
+}
+
+
+:root{
+    
+    --brand-primary:#1e4158;
+    --brand-primary-text:#fefefe;
+    
+    --brand-light:#fefefe;
+    --brand-light-text:#202020;
+    --brand-danger:#BF1722;
+    
+    --cta-background:rgb(247,148,31);
+    --cta-background-hover:rgba(247,148,31, 0.9);
+    --cta-color:#202020;
+    --light-danger-btn-color:#202020;
+
+    --box-shadow-standard:rgba(0,0,0,0.5);
+
+    --form-border-radius:5px;
+    --form-border-color: var(--border-grey);
+    --form-background-color:#fff;
+}
+
+/*
+~~~----------------------------------------------------------------
+HEADER ELEMENTS
+-------------------------------------------------------------------
+*/
+
+.panel{
+    background-color: var(--brand-primary);
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block:2rem;
+    max-width:480px;
+}
+
+
+.header{
+    font-size:2rem;
+    color:var(--brand-primary-text);
+    margin-bottom:1rem;
+    letter-spacing: 1px;
+    text-shadow: var(--box-shadow-standard);
+    line-height: 2rem;
+}
+
+#new-task-form{
+    display: flex;
+}
+
+#new-task-form input{
+    margin-right: .5rem;
+}
+
+
+/*
+~~~----------------------------------------------------------------
+TASK LIST ELEMENTS
+-------------------------------------------------------------------
+*/
+
+#task-list {
+    list-style: none;
+    padding: 0;
+    color:var(--brand-primary-text);
+    min-width: 480px;
+    display: flex;
+    flex-direction: column;
+}
+
+#task-list li{
+    background-color: var(--brand-light);
+    color:var(--brand-light-text);
+    padding:1rem;
+    margin-block:.25rem;
+    border-radius: 5px;
+    transition:.25s ease-in-out;
+    scale: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+#task-list li:hover{
+    scale:1.05;
+}
+
+#task-list .fa-trash{
+    color: var(--light-danger-btn-color);
+    font-size:.75rem;
+}
+
+#task-list .fa-trash:hover{
+    color: var(--brand-danger);
+}
+
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+    width:100vw;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--brand-primary);
+    color:var(--brand-secondary-text);
+    
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4{
+    margin:0;
+}
+
+
+/*
+~~~----------------------------------------------------------------
+FORM ELEMENTS
+-------------------------------------------------------------------
+*/
+
+input[type="text"]{
+    border:1px solid var(--form-border-color);
+    border-radius: var(--form-border-radius);
+    padding: 1rem;
+    font-family: inherit;
+    background-color: var(--form-background-color);
+    scale:1;
+    transition:.1s ease-in;
+    font-family: inherit;
+    font-size: 1.25rem;
+}
+
+input[type="text"]:focus, 
+input[type=date]:focus, 
+input[type=time]:focus, 
+input[type="text"]:active, 
+input[type=date]:active, 
+input[type=time]:active {
+    outline:none;
+    box-shadow: 1px 1px 4px var(--box-shadow-standard);
+    scale:1.05
+}
+
+
+/*
+~~~----------------------------------------------------------------
+    UTILITY CLASSES
+-------------------------------------------------------------------
+*/
+
+.btn {
+    border:0;
+    padding:1rem;
+    border-radius: 5px;
+    transition: scale 0.2s ease-in-out, background-color 0.4s ease;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    font-family: inherit;
+    letter-spacing: 1px;
+    font-size: 1.25rem;
+}
+
+.btn:focus{
+    outline:none;
+}
+
+.btn:hover, .btn:active{
+    scale:1.02;
+}
+
+.btn-large{
+    padding:2rem;
+    font-size:1.25rem;
+}
+
+.btn.cta{
+    background-color:var(--cta-background);
+    color:var(--cta-color);
+    font-weight: bold;
+}
+
+.btn.cta:hover, .btn.cta:active{
+    background-color:var(--cta-background-hover);
+    color:var(--cta-color);
+}
+
+.gutters{
+    display:flex;
+    flex-direction: column;
+    max-width: 1400px;
+    margin-inline:3rem;
+}
